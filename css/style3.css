@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;0,700;0,900;1,500&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  color: #dcdcdc;
+}
+.header{
+  background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url('/img/back.jpg');
+  width: 100%;
+  min-height: 100vh;  
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+}
+nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav-links{
+  background: #dcdcdc;
+  padding: 10px 30px;
+  text-align: right;
+  border-bottom-left-radius: 30px;
+}
+nav ul li{
+  display: inline-block;
+  padding: 10px 30px;
+}
+nav ul li a{
+  color: #2596be;
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: 600;
+  position: relative;
+}
+nav ul li a::after{
+  content: '';
+  position: absolute;
+  height: 2px;
+  width: 0%;
+  background:#e58346;
+  bottom: 0;
+  left: 0;
+  transition: width 0.5s;
+}
+nav ul li a:hover:after{
+  width: 100%;
+}
+.logo{
+  letter-spacing: 2px;
+  font-size: 30px;
+  margin: 0 10%;
+  position: relative;
+  color: #2596be;
+  z-index: 1;
+}
+.logo::after{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background: #2596be;
+  bottom: 0;
+  left: 0;
+  border-radius: 50%;
+} 
+.left-border{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20%;
+  height: 100vh;
+  background: #fff;
+}
+.row{
+  display: flex;
+  margin-top: 5%;
+  padding: 0 10%;
+  position: relative;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+.left-col{
+  flex-basis: 40%;
+}
+.right-col{
+  flex-basis: 55%;
+}
+.left-col img{
+  width: 80%;
+  border-radius: 10px;
+}
+.right-col h1{
+  font-size: 55px;
+  color: #fff;
+}
+.right-col p{
+  color: #dcdcdc;
+  font-size: 20px;
+  margin: 20px 0 70px;
+}
+.social-media{
+  display: flex;
+  margin-top: 30px;
+}
+.category{
+  width: 100px;
+  height: 100px;
+  background: #fff;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.category img{
+  width: 50px;
+}
+.menu{
+  width: 40px;
+  display: none;
+}
+/* query for menu */
+@media only screen and (max-width:800px){
+  .nav-links ul {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    background: #333;
+    width: 100%;
+    overflow: hidden;
+    transition: max-height 0.5s;
+  }
+  .nav-links ul li{
+    display: block;
+    margin-right: 50px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .nav-links ul li a{
+    color: #fff;
+  }
+  .menu{
+    display: block;
+    cursor: pointer;
+  }
+}
